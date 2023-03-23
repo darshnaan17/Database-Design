@@ -1,0 +1,281 @@
+p {
+  background: rgba(255, 255, 255, .75);
+}
+
+.navbar {
+   box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+   0 2px 4px 0 rgba(0,0,0,.2),
+   0.3em 0.3em 1em rgba(0,0,0,0.3);
+  
+} 
+
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: #1A1A1B;
+  color: #0A1D37;
+}
+
+
+
+
+
+.flip-container {
+  margin: 0 auto;
+  perspective: 1000;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.8s;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+}
+
+.flip-container, .front, .back {
+  width: 30px;
+  height: 30px;
+}
+
+.front {
+  z-index: 1;
+  border-radius: 50%;
+  top: -1px;
+}
+
+.front img {
+  vertical-align: middle !important;
+  color: #a2babe;
+}
+
+.back {
+  border-radius: 50%;
+  transform: rotateY(180deg);
+}
+
+.back img{
+  width: 35px;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #FCDEC0;
+}  
+
+
+
+#hero-section {
+
+  background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.2)), url('img/1.jpg');
+	background-size: cover, cover;
+	background-position: center, center;
+	background-attachment: fixed;
+	min-height: 100vh;
+
+  padding: clamp(100px, 10vh, 120px) 0;
+
+}
+
+#profile-img {
+
+  text-align: center;
+  margin: clamp(10px, 10vh, 100px) auto;
+  border: 10px solid #D6D2C4;
+  border-radius: 100%;
+  transition: transform .5s ease-in-out;
+
+  background-image:  url("img/haribo.jpg");
+  background-position: center;
+  background-size: cover; 
+
+  height: clamp(250px, 20vh, 200px);  
+
+  width: clamp(250px, 20vh, 200px);
+} 
+
+
+.img-container:hover #profile-img{
+  transform: scale(1.1) rotate(25deg);
+}
+
+
+#hero-section h2 {
+  text-shadow: 3px 3px 4px #402218;
+  font-size: clamp(1.75em, 10vw, 3.2em);
+
+  font-weight: bolder;
+
+  text-align: center;
+
+  padding: 1.5rem 1rem;
+  color: #FCFCFC;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+#hero-section p {
+  font-size: clamp(1.75em, 10vw, 3.2em);
+
+  text-shadow: 3px 3px 4px #402218;
+
+  text-align: center;
+
+  padding: 1.5rem 1rem;
+  color: #FCFCFC;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+
+#mission-section {
+  background-color: #C1AC95;
+  border: solid 1px rgba(0,0,0,.2);
+  color: black;
+  text-align: center;
+  padding: 15px 20px 15px 20px;
+
+}
+
+#mission-section p {
+  font-size: clamp(.75em, 4vw, 1.75em);
+  text-align: left;
+  background-color: #C1AC95;
+} 
+
+#mission-section h3 {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin: auto;
+  font-size: clamp(1.75em, 10vw, 3.2em);
+  height: clamp(10px, 20vh, 100px);
+}
+
+#mission-section img {
+  width: clamp(500px, 38vw, 800px);
+}
+
+
+#skills-section {
+  border: solid 1px rgba(0,0,0,.2);
+  color: black;
+  background-color: beige;
+  text-align: center;
+  padding: 15px 20px 15px 20px;
+}
+
+#skills-section h3 {
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  font-size: clamp(1.75em, 10vw, 3.2em);
+  height: clamp(10px, 20vh, 100px);
+}
+#skills-section p {
+background-color:beige;
+}
+.skill-container {
+  background-color:beige;
+  margin: auto;
+  padding: 50px;
+  display: inline-table;
+  position: relative;
+}
+
+.skill-container img {
+  height: clamp(100px, 15vh, 150px);
+
+}
+
+#inspiration-section {
+  color: black;
+  background-color:  #946B5F;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+}
+
+.space {
+  background-color:  #946B5F;
+}
+
+#inspiration-section h3 {
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+  margin: auto;
+  font-size: clamp(1.75em, 10vw, 3.2em);
+  height: clamp(10px, 20vh, 100px);
+}
+#inspiration-section p {
+  background-color: transparent;
+}
+
+.carousel-item h5 p {
+ text-shadow: 3px 3px 4px black;
+} 
+
+.carousel-item img {
+  width: 100%;
+
+  object-fit: cover; 
+}
+
+
+#contact-section i:hover, #contact-section a:hover {
+  color: lightsteelblue;
+  animation: heartBeat; 
+  animation-duration: 3s; 
+}
+
+#contact-section {
+  background-color:#E5B299;
+  color: #333F44;
+  height: 350px;
+  font-size: clamp(36px, 50px, 75px);
+}
+
+#contact-section h3 {
+  font-weight: bolder;
+  font-size: clamp(20px, 3vw, 26px)
+}
+#contact-section i {
+  background-color:#E5B299;
+  color: #333F44;
+  font-size: clamp(10px, 15vw, 75px);
+
+}
+
+
+
+#contact-section p {
+  font-size: clamp(12px, 4vw, 16px);
+  background-color:#E5B299;
+}
+
+
+#footer-section {
+  height: 50px;
+  background-color: #FFEEDB;
+  margin: auto;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: clamp(20px, 2vw, 16px);
+}
+
+#footer-section p{
+  background-color: #FFEEDB;
+}
+
+
+.d-none {
+     display: block!important;
+}  
+
